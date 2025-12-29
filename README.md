@@ -1,141 +1,97 @@
-# TradeSync.AI
+# TradeSync.AI – Organization GitHub Configuration
 
-**TradeSync.AI** is a modular, hybrid trading platform designed to bridge **MetaTrader 5 (MQL5)** with **Python-based AI and rule-driven trading services**.
+This repository contains **organization-wide GitHub configuration and community health files** for the **TradeSync.AI** organization.
 
-It enables traders and developers to build, test, and deploy **algorithmic, AI-assisted, and systematic trading workflows** using a clean, service-oriented architecture that works both **locally** and in the **cloud**.
-
----
-
-## 🚀 Vision
-
-Modern trading systems should be:
-
-* **Modular** — easy to extend and evolve
-* **Interoperable** — connect legacy platforms (MT5) with modern AI stacks
-* **Transparent** — explicit risk management and decision logic
-* **Scalable** — from local research to production-grade SaaS
-
-TradeSync.AI is built around these principles.
+The contents of this repository apply automatically to all repositories under the TradeSync.AI GitHub organization unless explicitly overridden.
 
 ---
 
-## 🧠 High-Level Architecture
+## 📌 Purpose of This Repository
 
-TradeSync.AI follows a **client–bridge–services** architecture:
+The `.github` repository is a **special GitHub repository** used to define:
+
+* Default community health files
+* Shared contribution guidelines
+* Issue and pull request templates
+* Security policies
+* Organization-level documentation and automation
+
+This ensures **consistency, clarity, and quality standards** across all TradeSync.AI repositories.
+
+---
+
+## 📂 Repository Structure
+
+Typical files in this repository may include:
 
 ```
-MetaTrader 5 (MQL5)
-        │
-        ▼
-TradeSync Bridge (Python)
-        │
-        ├── Model Service (AI / ML inference)
-        ├── Risk Engine (position sizing, limits, exposure)
-        └── Trainer Service (offline & online learning)
+.github/
+ ├── README.md                  # This file
+ ├── CONTRIBUTING.md            # Organization-wide contribution guidelines
+ ├── CODE_OF_CONDUCT.md         # Contributor code of conduct
+ ├── SECURITY.md                # Security reporting policy
+ ├── ISSUE_TEMPLATE/
+ │    ├── bug_report.yml
+ │    ├── feature_request.yml
+ │    └── question.yml
+ ├── PULL_REQUEST_TEMPLATE.md   # Default PR template
+ └── workflows/
+      └── *.yml                 # Shared GitHub Actions workflows (if applicable)
 ```
 
-### Key Concepts
-
-* **MQL5 Client**
-  Lightweight EA/scripts that send market data, trade intents, and execution requests.
-
-* **Bridge**
-  A Python service (TCP / HTTP) that acts as a protocol translator and router.
-
-* **Services**
-  Independent microservices for AI models, risk management, and training pipelines.
-
-This separation keeps MT5 simple while allowing complex logic to evolve independently.
+> GitHub automatically applies these files to all repositories in the organization.
 
 ---
 
-## 📦 Repositories
+## 🤝 Contribution Guidelines
 
-Each repository is self-contained but designed to work together.
+Unless a repository defines its own rules, contributors should follow:
 
-| Repository                  | Description                                                     |
-| --------------------------- | --------------------------------------------------------------- |
-| `tradesync-mql5-client`     | Modular MQL5 client utilities (Socket, HTTP, logging, settings) |
-| `tradesync-bridge`          | Python bridge server (TCP + HTTP) connecting MT5 to services    |
-| `tradesync-model-service`   | AI / ML inference service (signals, predictions)                |
-| `tradesync-risk-engine`     | Risk management and trade validation service                    |
-| `tradesync-trainer-service` | Model training, evaluation, and lifecycle management            |
+* The organization-wide **CONTRIBUTING.md**
+* The **Code of Conduct**
+* The default **Pull Request Template**
 
----
+These guidelines are designed to:
 
-## 🧩 Design Principles
-
-* **Explicit over implicit**
-  Every trade decision, risk check, and model output is observable.
-
-* **Loose coupling**
-  Services communicate via well-defined messages, not shared state.
-
-* **Production-minded**
-  Logging, error handling, and configuration are first-class concerns.
-
-* **MT5-friendly**
-  Designed around real constraints of MQL5 networking and execution.
+* Keep changes reviewable and well-documented
+* Maintain architectural consistency
+* Encourage constructive collaboration
 
 ---
 
-## 🛠️ Technology Stack
+## 🔐 Security Policy
 
-* **Client:** MetaTrader 5 (MQL5)
-* **Bridge:** Python (FastAPI, asyncio)
-* **AI / ML:** Python (PyTorch, NumPy, pandas – service dependent)
-* **Protocols:** TCP sockets, HTTP (WebRequest-compatible)
-* **Deployment:** Local, VPS, Docker, or cloud-native
+Security-related issues should be reported according to the instructions in **SECURITY.md**.
+
+Please **do not open public issues** for vulnerabilities or sensitive security concerns.
 
 ---
 
-## 🔐 Security & Risk Philosophy
+## 🧠 Governance & Standards
 
-TradeSync.AI is built with the assumption that:
+This repository helps enforce:
 
-* **AI does not replace risk management**
-* **Every trade must pass deterministic risk rules**
-* **Execution authority always remains controllable**
+* Consistent naming conventions
+* Clear commit and PR descriptions
+* Structured issue reporting
+* Responsible disclosure practices
 
-AI generates **signals**, not blind execution.
-
----
-
-## 📖 Status
-
-⚠️ **Active Development**
-
-TradeSync.AI is currently under active development.
-APIs, message formats, and internal interfaces may evolve until the first stable release.
+It does **not** contain application code or trading logic.
 
 ---
 
-## 🤝 Contributing
+## 🚧 Status
 
-Contributions are welcome, especially in:
-
-* MQL5 client utilities
-* Message protocol design
-* Risk-engine logic
-* Model-service integrations
-* Documentation and examples
-
-Please open an issue or discussion before submitting large changes.
+This repository evolves as the organization grows.
+Files may be added or updated to reflect new workflows, policies, or automation needs.
 
 ---
 
-## 📜 License
+## 📬 Contact
 
-License information will be added before the first stable release.
-Until then, all code is provided for **educational and experimental purposes**.
-
----
-
-## 📬 Contact & Updates
-
-Follow the organization for updates as the platform evolves.
+For general questions about TradeSync.AI, refer to the main organization README or open a discussion in the appropriate repository.
 
 ---
 
 **TradeSync.AI**
-*Bridging traditional trading platforms with modern AI systems — responsibly.*
+*Building modular, responsible, AI-assisted trading infrastructure.*
